@@ -1,0 +1,17 @@
+#1/bin#bash
+
+#Set home directory where flight file has been copied to
+cd /home/david.murcia
+
+# DEV A adding create a function where you will run the command needed for flights delayed
+hola_mundo() {
+
+echo " The number of flights delayed by 15 minutes in Gainesville are:"
+cat  flights.May2018-April2020.csv | cut -d"," -f13,7|grep "GNV"| grep [1]| uniq -c
+
+}
+
+#Call function to perform output inside of it
+hola_mundo
+
+
